@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Results{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<article class="image">
+    <header>
+        <div>
+            <h1>Image Detect</h1>
+        </div>
+    </header>
+    <p class="body">
+        <img src="{{ url_for('static', filename = 'client_img/default.jpg') }}" alt="Image"></br>
+        Count number: {{ nbr }}
+    </p>
+</article>
+{% endblock %}
