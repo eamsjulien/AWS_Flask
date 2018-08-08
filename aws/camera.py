@@ -1,7 +1,7 @@
 from time import time
 import os
 
-FRAME_BASE = os.join.path(os.environ['AWS_FLASK_FOLDER'],
+FRAME_BASE = os.path.join(os.environ['AWS_FLASK_FOLDER'],
                           'aws/static/client_img/',
                           'frame')
 
