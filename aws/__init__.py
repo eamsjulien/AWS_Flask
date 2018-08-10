@@ -1,5 +1,4 @@
 import os
-import json
 
 from flask import Flask
 from flask import render_template
@@ -42,11 +41,7 @@ def create_app(test_config=None):
     @app.route('/')
     @login_required
     def index():
-        json_path = os.path.join(app.static_folder, 'json', 'current.json')
-        with open(json_path) as f:
-            data = json.load(f)
-        count_nbr = data['count']
-        return render_template('detect/index.html', nbr=count_nbr)
+        return render_template('detect/index.html')
 
     @app.route('/video_feed')
     def video_feed():
